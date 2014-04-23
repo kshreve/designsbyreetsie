@@ -1,0 +1,26 @@
+{
+  "name": "DesignsByReetsie",
+  "version": "0.0.1",
+  "description": "Gourd Art",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kshreve/DesignsByReetsie.git"
+  },
+  "keywords": [
+    "nodejs",
+    "angularjs",
+    "expressjs",
+    "connect"
+  ],
+  "author": "kshreve",
+  "bugs": {
+    "url": "https://github.com/kshreve/DesignsByReetsie/issues"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+   "dependencies": {
+    "connect": "2.4.2",
+    "express": "3.x"
+   }
+}

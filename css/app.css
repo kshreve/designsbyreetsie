@@ -1,0 +1,117 @@
+html
+{
+    background-color: #D7AD67;
+    z-index: 0;
+}
+
+header 
+{
+    background-color: #790000;
+    width: auto;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    height: 69px;
+}
+
+header > div {
+    margin:20px;
+}
+
+.row div 
+{
+    margin-bottom: 1em;
+}
+
+nav 
+{
+    background-color: #E5CA9C;
+}
+
+main
+{
+    width: 100%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+}
+
+footer
+{
+    color: #FFFFFF;
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: auto;
+    font-size:11px;
+}
+
+a
+{
+    color: #F7941D;
+}
+
+.viewPort
+{
+    background-color:#FFFFFF;
+    
+    /*page text*/
+    color:#252525;
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+}
+
+.copyright
+{
+    color:#666666;
+}
+
+.titleText
+{
+    color: #930;
+    font-family: verdana, geneva;
+    font-size: 18px;
+}
+
+#emailForm
+{
+    font-weight:bold;    
+}
+
+#emailForm ul 
+{
+    list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+#emailForm ul li
+{
+    font-weight:bold;
+    list-style:none;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+#emailForm ul input
+{
+    margin-left:2em;
+    margin-bottom: 1em;
+}
+
+#emailForm ul li em
+{
+    left: -1em;
+    top: -3px;
+    font-weight: bold;
+    font-size: 1.6em;
+    width: .8em;
+    font-style: normal;
+    text-align: center;
+}
+
+#message{
+    height:90px;
+    width:300px;
+}
