@@ -1,35 +1,27 @@
 function HomeCtrl($scope, $cookies, $location, shwarmaLocalStorage, $http) {
-	
+
 }
 
 function AboutCtrl($scope, $cookies, $location, $http) {
-	
+
 }
 
 
 function AwardCtrl($scope, $cookies, $location, $http) {
-	
+
 }
 
 function GourdArtSoldCtrl($scope, $cookies, $location, $http) {
-	
+
 }
 
-function ContactCtrl($scope, $cookies, $location, $http) {
-	
-}
-
-
-function formCtrl($scope,$cookies,$location,$http) {
-    $scope.content={};
-
+function ContactCtrl($scope, $http) {
 	$scope.submit = function() {
-        console.log("submit");
-        
-        console.log($scope.fname);
-        console.log($scope.lname);
-        console.log($scope.emailAddress);
-        console.log($scope.phone);
-        console.log($scope.message);
+	    var mailOptions = {
+	        from: $scope.emailAddress,
+	        to: 'kshreve@gmail.com',
+	        subject: $scope.fname+' '+$scope.lname + 'Designs By Reetsie Inquiry' + Date.now(),
+	        text: $scope.message + '<br/>Phone number to contact' + $scope.phone
+	    }
     };
 }

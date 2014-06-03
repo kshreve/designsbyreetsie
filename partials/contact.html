@@ -1,4 +1,4 @@
-<div ng-controller="ContactCtrl">
+<div>
         <div class="row">
             <div class="c6">
                 <div class="titleText">Galleries</div>
@@ -13,7 +13,7 @@
             </div>
             <div class="c6">
                 <div>Reetsie welcomes inquiries regarding gourds for sale, commissioned artwork, and questions regarding her work.</div>
-                <form id="emailForm" class="c6" ng-controller="formCtrl" ng-submit="submit">
+                <form id="emailForm" class="c6">
                     <ul>
                         <li><div><em>*</em>First Name:</div></li>
                         <input type="text" name="fname" ng-model="fname" required>
@@ -21,7 +21,7 @@
                         <input type="text" name="lname" ng-model="lname" required>
                         <li><em>*</em>Email:</li>
                         <input type="email" name="input" ng-model="emailAddress" required>
-                    
+
                         <li><div>Best Phone Number to Reach You (Please include area code):</div></li>
                         <input type="text" name="phone" ng-model="phone">
                         <li><div style="font-weight:bold">Are you interested in purchasing a gourd, commissioned artwork, or have a general inquiry?</div></li>
@@ -31,6 +31,6 @@
                     </ul>
                 </form>
             </div>
-            
+
         </div>
 </div>

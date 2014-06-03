@@ -1,4 +1,4 @@
-angular.module('DesignsByReetsie', ['DesignsByReetsieServices','ngCookies','DesignsByReetsieFilters']).
+angular.module('DesignsByReetsie', ['ngCookies','DesignsByReetsieFilters']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/',{templateUrl: 'partials/home.html', controller: HomeCtrl})
