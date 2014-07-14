@@ -1,4 +1,4 @@
-function HomeCtrl($scope, $cookies, $location, shwarmaLocalStorage, $http) {
+function HomeCtrl($scope, $cookies, $location, $http) {
 
 }
 
@@ -29,10 +29,10 @@ function ContactCtrl($scope, $http) {
             type: "POST",
             url: "/sendMail",
             data: data,
-            success: function() {
+            success: function(msg) {
                 console.log('mail sent');
             },
-            error: function() {
+            error: function(msg) {
                 console.log('something went wrong');
             }
         });

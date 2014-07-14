@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var mail = require("nodemailer");
+var nodemailer = require("nodemailer");
 
 app.use(app.router);
 app.use(express.static(__dirname));
