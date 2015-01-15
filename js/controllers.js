@@ -1,45 +1,40 @@
-function HomeCtrl($scope, $cookies, $location, $http) {
+function HomeController($scope, $cookies, $location, $http) {
 
 }
 
-function AboutCtrl($scope, $cookies, $location, $http) {
+function AboutController($scope, $cookies, $location, $http) {
 
 }
 
 
-function AwardCtrl($scope, $cookies, $location, $http) {
+function AwardController($scope, $cookies, $location, $http) {
 
 }
 
-function GourdArtSoldCtrl($scope, $cookies, $location, $http) {
+function GourdArtSoldController($scope, $cookies, $location, $http) {
 
 }
 
-function ContactCtrl($scope, $http) {
-   
-    
-	$scope.submit = function() {
+function ContactController($scope, $http) {
+    $scope.submit = function() {
         var messageData = {
             from: $scope.emailAddress,
-            to: 'kshreve@gmail.com',
-            subject: $scope.fname +' '+ $scope.lname + ' Designs By Reetsie Inquiry ' + Date.now(),
-            text: $scope.message + '<br/>Phone number to contact: ' + $scope.phone
+            name: $scope.fname + ' ' + $scope.lname,
+            text: $scope.message,
+            phone: $scope.phone
         };
-        debugger;
-        sendMail(messageData);
-    };
-}
 
-function sendMail(messageToSend) {
-    $.ajax({
-            type: "POST",
-            url: "/sendMail",
-            data: messageToSend,
-            success: function(msg) {
-                console.log('mail sent');
-            },
-            error: function(msg) {
-                console.log('something went wrong');
-            }
-    });
+        $http.post("/sendMail", messageData)
+             .success(function(data, status, headers, config) {
+                //console.log('success', data, status);
+                $scope.emailAddress='';
+                $scope.fname='';
+                $scope.lname='';
+                $scope.message='';
+                $scope.phone='';
+             })
+             .error(function(data, status, headers, config) {
+                console.log('error', data, status);
+             });
+    };
 }

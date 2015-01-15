@@ -74,19 +74,19 @@ a
     font-size: 18px;
 }
 
-#emailForm
+.emailForm
 {
     font-weight:bold;    
 }
 
-#emailForm ul 
+.emailForm ul
 {
     list-style-type: none;
 	padding-left: 0;
 	margin-left: 0;
 }
 
-#emailForm ul li
+.emailForm ul li
 {
     font-weight:bold;
     list-style:none;
@@ -94,13 +94,13 @@ a
     margin-left: 1em;
 }
 
-#emailForm ul input
+.emailForm ul input
 {
     margin-left:2em;
     margin-bottom: 1em;
 }
 
-#emailForm ul li em
+.emailForm ul li em
 {
     left: -1em;
     top: -3px;
