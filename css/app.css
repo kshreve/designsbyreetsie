@@ -37,7 +37,18 @@ main
     height:auto;
 }
 
-footer
+#footer
+{
+    color: #FFFFFF;
+    background-color: black;
+    bottom: 0px;
+    font-size:11px;
+    margin: - auto auto 0;
+    padding: 20px;
+    border-top: 1px solid #979797;
+}
+
+/*footer
 {
     color: #FFFFFF;
     background-color: black;
@@ -46,7 +57,7 @@ footer
     width: auto;
     font-size:11px;
     float:none;
-}
+}*/
 
 a
 {
