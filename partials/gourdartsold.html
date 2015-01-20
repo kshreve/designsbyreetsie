@@ -1,5 +1,8 @@
 <div ng-controller="GourdArtSoldController">
     <div class="titleText">Thank you!</div>
-    <div>Reetsie extends her most sincere thanks to all those who have already purchased her gourd art. If you would like to learn how you, too, may purchase Reetsie's gourd art, please <a href="#/Contact">contact Reetsie directly.</a></div>
-    <div>NEED TO FILL OUT PICTURES</div>
+    <div>Reetsie extends her most sincere thanks to all those who have already purchased her gourd art.</div>
+    <div>If you would like to learn how you too, may purchase Reetsie's gourd art, please <a href="#/Contact">contact Reetsie directly.</a></div>
+    <div ng-repeat="image in images">
+        <img class="c2" src="{{image.link}}" ></img>
+    </div>
 </div>

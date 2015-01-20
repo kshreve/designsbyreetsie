@@ -7,4 +7,8 @@ angular.module('DesignsByReetsie', ['ngCookies','DesignsByReetsieFilters']).
             .when('/SoldArt', {templateUrl:'partials/gourdartsold.html', controller: GourdArtSoldController})
             .when('/Contact', {templateUrl:'partials/contact.html', controller: ContactController})
             .otherwise({redirectTo: '/'});
-    }]);
+    }])
+    .constant('Constants', {"ClientId": "Client-Id 4dd8fa5ed1dafe1",
+                           "BaseUrl" : "https://api.imgur.com/3/album/",
+                           "Images" : "/images",
+    });
