@@ -8,13 +8,24 @@ function AboutController($scope, $cookies, $location, $http) {
 
 
 function AwardController($scope, ImgurApi) {
-
+    $scope.images = {};
+    ImgurApi.getPageImages('awards').success(function(data) {
+        var images = data.data;
+        for(var i=0;i<images.length; i++){
+            images[i].link = images[i].link.replace('http://', 'https://');
+        }
+        $scope.images = images;
+    });
 }
 
 function GourdArtSoldController($scope, ImgurApi) {
     $scope.images = {};
     ImgurApi.getPageImages('gourdartsold').success(function(data) {
-        $scope.images = data.data;
+        var images = data.data;
+        for(var i=0;i<images.length; i++){
+            images[i].link = images[i].link.replace('http://', 'https://');
+        }
+        $scope.images = images;
     });
     
 }

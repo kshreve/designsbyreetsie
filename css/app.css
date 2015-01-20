@@ -48,17 +48,6 @@ main
     border-top: 1px solid #979797;
 }
 
-/*footer
-{
-    color: #FFFFFF;
-    background-color: black;
-    position: fixed;
-    bottom: 0px;
-    width: auto;
-    font-size:11px;
-    float:none;
-}*/
-
 a
 {
     color: #F7941D;
@@ -67,11 +56,11 @@ a
 .viewPort
 {
     background-color:#FFFFFF;
-    
     /*page text*/
     color:#252525;
     font-family: verdana, arial, sans-serif;
     font-size: 11px;
+    padding-bottom: 10px;
 }
 
 .copyright
@@ -126,4 +115,27 @@ a
 #message{
     height:90px;
     width:300px;
+}
+
+figure {
+  float: right;
+  width: 30%;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+.italic {
+    font-style: italic;
 }
