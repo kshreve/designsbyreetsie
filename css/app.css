@@ -45,6 +45,7 @@ footer
     bottom: 0px;
     width: auto;
     font-size:11px;
+    float:none;
 }
 
 a
