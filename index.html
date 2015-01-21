@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="lib/angular/angular.min.js" type="text/javascript"></script>
-    <script src="lib/angular/angular-resource.js" type="text/javascript"></script>
-    <script src="lib/angular/angular-cookies.js" type="text/javascript"></script>
+    <script src="lib/angular/angular-route.min.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>
-    <script src="js/controllers.js" type="text/javascript"></script>
     <script src="js/services.js" type="text/javascript"></script>
-    <script src="js/filters.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
     <script src="js/directives.js" type="text/javascript"></script>
 
     <link rel="stylesheet" type="text/css" href="css/zimit.min.css">
@@ -24,8 +22,8 @@
     <main>
         <nav class="c12">
             <ul id="menu">
-                <li><a href="#/Home" ng-class="{'active': Page}">Home</a></li>
-                <li><a href="#/About">About Reetsie</a></li>
+                <li><a id="Home" href="#/Home">Home</a></li>
+                <li><a id="About" href="#/About">About Reetsie</a></li>
                 <li><a href="#/Awards">Award Winning Gourds</a></li>
                 <li><a href="#/SoldArt">Gourd Art Sold</a></li>
                 <li><a href="#/Contact">Contact</a></li>

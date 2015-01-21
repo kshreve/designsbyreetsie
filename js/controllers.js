@@ -1,11 +1,10 @@
-function HomeController($scope, $cookies, $location, $http) {
+function HomeController($scope, $location, $http) {
     $scope.Page = 'Home';
 }
 
-function AboutController($scope, $cookies, $location, $http) {
+function AboutController($scope, $location, $http) {
     $scope.Page = 'About';
 }
-
 
 function AwardController($scope, ImgurApi) {
     $scope.Page = 'Awards';
@@ -20,7 +19,7 @@ function AwardController($scope, ImgurApi) {
 }
 
 function GourdArtSoldController($scope, ImgurApi) {
-    $scope.Page = 'GourdArtSold';
+    $scope.Page = 'SoldArt';
     $scope.images = {};
     ImgurApi.getPageImages($scope.Page).success(function(data) {
         var images = data.data;
