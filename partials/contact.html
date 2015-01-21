@@ -13,21 +13,25 @@
         </div>
         <div class="c6">
             <div>Reetsie welcomes inquiries regarding gourds for sale, commissioned artwork, and questions regarding her work.</div>
-            <form name="emailForm" class="c6 emailForm" method="post" novalidate ng-controller="ContactController">
+            <form name="emailForm" class="c6 emailForm" method="post" ng-submit="submit()" novalidate>
                 <ul>
                     <li><div><em>*</em>First Name:</div></li>
-                    <input type="text" name="fname" ng-model="fname" required>
+                    <input type="text" ng-model="emailForm.fname" required>
+                    
                     <li><em>*</em>Last Name:</li>
-                    <input type="text" name="lname" ng-model="lname" required>
+                    <input type="text" ng-model="emailForm.lname" required>
+                    
                     <li><em>*</em>Email:</li>
-                    <input type="email" name="input" ng-model="emailAddress" required>
+                    <input type="email" ng-model="emailForm.emailAddress" required>
 
                     <li><div>Best Phone Number to Reach You (Please include area code):</div></li>
-                    <input type="text" name="phone" ng-model="phone">
+                    <input type="text" ng-model="emailForm.phone">
+                    
                     <li><div style="font-weight:bold">Are you interested in purchasing a gourd, commissioned artwork, or have a general inquiry?</div></li>
-                    <input id="message" type="text" name="question" ng-model="message" height="90px">
+                    <input id="message" type="text" ng-model="emailForm.message" height="90px">
+                    
                     <li><div style="font-weight:bold">Submit Your Message:</div></li>
-                    <li><button type="submit" ng-click="submit()">Submit!</button></li>
+                    <li><button type="submit" value="submit">Submit!</button></li>
                 </ul>
             </form>
         </div>

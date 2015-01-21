@@ -4,9 +4,11 @@
             <div class="titleText">Gourds by Reetsie</div>
             <div>Reetsie's works of art come in variety of styles, shapes and sizes. Here is a sampling of her work. If you'd like to purchase artwork from Reetsie, please <a href="#/Contact">contact her.</a></div>
             <div>Click on the photos below to view full size image.</div>
-            <div ng-repeat="image in images">
-                <figure class="c2">
-                    <a href="{{image.link}}"><img  src="{{image.link}}" alt="{{image.title}}"></img></a>
+            <div>
+                <figure class="c2" ng-repeat="image in images">
+                    <a href="{{image.link}}">
+                        <img ng-src="{{'https://'+image.link}}" alt="{{image.title}}"></img>
+                    </a>
                     <figcaption>{{image.description.trim()}}</figcaption>
                 </figure>
             </div>
