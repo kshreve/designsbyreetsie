@@ -1,4 +1,4 @@
-angular.module('DesignsByReetsieFilters', []).
+angular.module('designsByReetsieFilters', []).
 	filter('orderObjectBy', function() {
 	  return function(items, field, reverse) {
 		var filtered = [];

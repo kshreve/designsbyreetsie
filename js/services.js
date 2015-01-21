@@ -1,4 +1,4 @@
-angular.module('DesignsByReetsie')
+angular.module('designsByReetsie')
 	.factory('ImgurApi', function($http, Constants) {
 	        var thing = {};
 	        
@@ -7,7 +7,7 @@ angular.module('DesignsByReetsie')
                 delete $http.defaults.headers.common['X-Requested-With'];
                 
                 var album = 'ePmjl';
-                if(page == "gourdartsold") {
+                if(page == "GourdArtSold") {
                     album = 'ePmjl'; //TODO: PUT SOMETHING HERE FOR ANOTHER ALBUM.
                 }
                 

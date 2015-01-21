@@ -28,6 +28,10 @@ nav
     background-color: #E5CA9C;
 }
 
+nav li .active {
+    color: #FFFFFF;
+}
+
 main
 {
     width: 100%;
