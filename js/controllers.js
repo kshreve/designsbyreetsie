@@ -9,7 +9,7 @@ function AboutController($scope, $location, $http) {
 function AwardController($scope, ImgurApi) {
     $scope.Page = 'Awards';
     $scope.images = {};
-    ImgurApi.getPageImages($scope.Page).success(function(data) {
+    ImgurApi($scope.Page).success(function(data) {
         var images = data.data;
         for(var i=0;i<images.length; i++){
             images[i].link = images[i].link.replace('http://', 'https://');
@@ -21,7 +21,7 @@ function AwardController($scope, ImgurApi) {
 function GourdArtSoldController($scope, ImgurApi) {
     $scope.Page = 'SoldArt';
     $scope.images = {};
-    ImgurApi.getPageImages($scope.Page).success(function(data) {
+    ImgurApi($scope.Page).success(function(data) {
         var images = data.data;
         for(var i=0;i<images.length; i++){
             images[i].link = images[i].link.replace('http://', 'https://');
