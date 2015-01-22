@@ -3,8 +3,10 @@
     <div>Reetsie extends her most sincere thanks to all those who have already purchased her gourd art.</div>
     <div>If you would like to learn how you too, may purchase Reetsie's gourd art, please <a href="#/Contact">contact Reetsie directly.</a></div>
     <div>
-        <figure class="c2" ng-repeat="image in images">
-            <img ng-src="{{'https://'+image.link}}" alt="{{image.title}}"></img>
+        <figure class="c3" ng-repeat="image in images">
+            <a href="{{'https://'+image.link}}">
+                <img ng-src="{{'https://'+image.link}}" alt="{{image.title}}"></img>
+            </a>
             <figcaption>{{image.description.trim()}}</figcaption>
         </figure>
     </div>
