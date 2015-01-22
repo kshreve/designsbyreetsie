@@ -32,6 +32,10 @@ nav li .active {
     color: #FFFFFF;
 }
 
+.body {
+    overflow-y: visible;
+}
+
 main
 {
     width: 100%;
@@ -142,4 +146,13 @@ figure img {
 
 .italic {
     font-style: italic;
+}
+
+.center {
+    text-align: center;
+}
+
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
