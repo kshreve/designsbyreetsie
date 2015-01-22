@@ -1,13 +1,15 @@
+// TODO: Controllers are defined here by convention. I might have to re-look at this once I start minification of the javascript.
+// During minification, I might have to pass in the parameters so that dependencies are still resolved.
 function HomeController($scope, $location, $http) {
-    $scope.Page = 'Home';
+    $scope.$parent.Page = 'Home';
 }
 
 function AboutController($scope, $location, $http) {
-    $scope.Page = 'About';
+    $scope.$parent.Page = 'About';
 }
 
 function AwardController($scope, ImgurApi) {
-    $scope.Page = 'Awards';
+    $scope.$parent.Page = 'Awards';
     
     ImgurApi($scope.Page).success(function(data) {
         var images = data.data;
@@ -19,7 +21,7 @@ function AwardController($scope, ImgurApi) {
 }
 
 function GourdArtSoldController($scope, ImgurApi) {
-    $scope.Page = 'SoldArt';
+    $scope.$parent.Page = 'SoldArt';
     
     ImgurApi($scope.Page).success(function(data) {
         var images = data.data;
@@ -32,7 +34,7 @@ function GourdArtSoldController($scope, ImgurApi) {
 }
 
 function ContactController($scope, $http) {
-    $scope.Page = 'Contact';
+    $scope.$parent.Page = 'Contact';
     
     $scope.submit = function() {
         var messageData = {

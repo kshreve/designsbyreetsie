@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress HtmlUnknownAnchorTarget -->
 <html ng-app="designsByReetsie">
   <head>
     <meta charset="utf-8">
@@ -16,17 +17,15 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
   </head>
   <body class="row body">
-    <header class="c12">
-        <div>Designs by Reetsie</div>
-    </header>
+    <header class="c12"><div>Designs by Reetsie</div></header>
     <main>
         <nav class="c12">
             <ul id="menu">
-                <li><a id="Home" href="#/Home">Home</a></li>
-                <li><a id="About" href="#/About">About Reetsie</a></li>
-                <li><a href="#/Awards">Award Winning Gourds</a></li>
-                <li><a href="#/SoldArt">Gourd Art Sold</a></li>
-                <li><a href="#/Contact">Contact</a></li>
+                <li><a id="Home" href="#/Home" ng-class="{'active': Page=='Home'}">Home</a></li>
+                <li><a id="About" href="#/About" ng-class="{'active': Page=='About'}">About Reetsie</a></li>
+                <li><a href="#/Awards" ng-class="{'active': Page=='Awards'}">Award Winning Gourds</a></li>
+                <li><a href="#/SoldArt" ng-class="{'active': Page=='SoldArt'}">Gourd Art Sold</a></li>
+                <li><a href="#/Contact" ng-class="{'active': Page=='Contact'}">Contact</a></li>
             </ul>
         </nav>
         <div class="c12 viewPort" ng-view></div>
