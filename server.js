@@ -19,7 +19,7 @@ app.post('/sendMail', function(req, res){
     var mailOptions = req.body;
     
     mailOptions.subject = (" Designs By Reetsie Inquiry " + moment().format("MMM Do"));
-    mailOptions.to = 'kshreve+garbage@gmail.com';
+    mailOptions.to = 'kshreve+DBR@gmail.com';
     mailOptions.from = mailOptions.from !== null ? mailOptions.from : "designsbyreetsie@gmail.com";
     mailOptions.html = mailOptions.text +"<br /> Name of Person: "+ mailOptions.name + "<br /> Phone number to contact: " + mailOptions.phone+ "<br/> Their email: " + mailOptions.from;
 
