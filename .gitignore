@@ -2,6 +2,7 @@ node_modules/
 node_modules
 node_modules\
 .c9/
+.idea/
 
 #################
 ## Eclipse
