@@ -20,7 +20,7 @@ header > div {
 
 .row div 
 {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 nav 
@@ -34,6 +34,7 @@ nav li .active {
 
 .body {
     overflow-y: visible;
+    height: auto;
 }
 
 main
@@ -45,13 +46,11 @@ main
     height:auto;
 }
 
-#footer
+footer
 {
     color: #FFFFFF;
     background-color: black;
-    bottom: 0px;
     font-size:11px;
-    margin: - auto auto 0;
     padding: 20px;
     border-top: 1px solid #979797;
 }
@@ -68,7 +67,7 @@ a
     color:#252525;
     font-family: verdana, arial, sans-serif;
     font-size: 11px;
-    padding-bottom: 10px;
+    padding: 10px 0px 10px 0px;
 }
 
 .copyright
@@ -144,15 +143,17 @@ figure img {
   width: 100%;
 }
 
-.italic {
-    font-style: italic;
-}
-
+/*used for centering an image, the containing div must have center, and margins auto*/
 .center {
     text-align: center;
 }
 
+/*used for centering an image, the containing div must have center, and margins auto*/
 .margin-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+.italic {
+    font-style: italic;
 }
