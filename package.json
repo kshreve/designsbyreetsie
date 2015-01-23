@@ -1,6 +1,6 @@
 {
   "name": "designsByReetsie",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "Gourd Art",
   "repository": {
     "type": "git",
@@ -16,15 +16,26 @@
     "url": "https://github.com/kshreve/DesignsByReetsie/issues"
   },
   "engines": {
-    "node": "0.8.x"
+    "node": "0.10.35"
   },
   "dependencies": {
-    "body-parser": "^1.9.0",
-    "express": "^4.9.7",
-    "moment": "^2.8.3",
-    "nodemailer": "^1.0.0",
+    "body-parser": "^1.10.2",
+    "express": "^4.11.1",
+    "moment": "^2.9.0",
+    "nodemailer": "^1.3.0",
     "nodemailer-smtp-transport": "^0.1.13",
-    "require": "^0.5.0",
-    "xoauth2": "^1.0.0"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.4.3",
+    "gulp-minify-css": "^0.4.2",
+    "gulp-minify-html": "^0.1.8",
+    "gulp-notify": "^2.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-uglify": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
   }
 }
