@@ -1,15 +1,13 @@
-var designsByReetsie = angular.module('designsByReetsie');
-
-designsByReetsie.controller('HomeController', ['$scope', function($scope) {
+angular.module('designsByReetsie').controller('HomeController', ['$scope', function($scope) {
     $scope.$parent.Page = 'Home';
 }]);
 
 
-designsByReetsie.controller('AboutController', ['$scope',function($scope) {
+angular.module('designsByReetsie').controller('AboutController', ['$scope', function($scope) {
     $scope.$parent.Page = 'About';
 }]);
 
-designsByReetsie.controller('AwardController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
+angular.module('designsByReetsie').controller('AwardController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
     $scope.$parent.Page = 'Awards';
     
     ImgurApi($scope.Page).success(function(data) {
@@ -21,7 +19,7 @@ designsByReetsie.controller('AwardController', ['$scope', 'ImgurApi', function($
     });
 }]);
 
-designsByReetsie.controller('GourdArtSoldController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
+angular.module('designsByReetsie').controller('GourdArtSoldController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
     $scope.$parent.Page = 'SoldArt';
     
     ImgurApi($scope.Page).success(function(data) {
@@ -33,7 +31,7 @@ designsByReetsie.controller('GourdArtSoldController', ['$scope', 'ImgurApi', fun
     });
 }]);
 
-designsByReetsie.controller('ContactController', ['$scope', '$http',function($scope, $http) {
+angular.module('designsByReetsie').controller('ContactController', ['$scope', '$http', function($scope, $http) {
     $scope.$parent.Page = 'Contact';
     
     $scope.submit = function() {
