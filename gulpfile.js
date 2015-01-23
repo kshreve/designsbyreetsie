@@ -6,6 +6,7 @@ var rename = require('gulp-rename');
 var notify = require('gulp-notify');
 var minifyHTML = require('gulp-minify-html');
 var del = require('del');
+var livereload = require('gulp-livereload');
 
 gulp.task('move', function() {
     var filesToMove = ['index.html', 'server.js', 'Procfile', 'img/*.*', 'node_modules/**/*.*', 'lib/angular/angular.min.js', 'lib/**/*.*'];
@@ -18,6 +19,7 @@ gulp.task('scripts', function() {
              .pipe(concat('app.min.js'))
              .pipe(uglify())
              .pipe(gulp.dest('dist/js'))
+             .pipe(livereload())
              .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -26,14 +28,16 @@ gulp.task('css', function() {
                .pipe(rename('app.min.css'))
                .pipe(minifycss())
                .pipe(gulp.dest('dist/css/'))
+               .pipe(livereload())
                .pipe(notify({message: 'CSS task complete'}));
 });
 
 gulp.task('html', function() {
     return gulp.src('partials/*.html')
-               .pipe(concat('partials/partials.html'))
+               .pipe(rename('partials.html'))
                .pipe(minifyHTML())
-               .pipe(gulp.dest('dist/'))
+               .pipe(gulp.dest('dist/partials'))
+               .pipe(livereload())
                .pipe(notify({message: 'html-partial task complete'}));
 });
 
@@ -42,3 +46,10 @@ gulp.task('clean', function(){
 });
 
 gulp.task('default', ['move', 'scripts', 'css', 'html']);
+
+gulp.task('watch', function() {
+    livereload.listen();
+    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('css/*.css', ['css']);
+    gulp.watch('partials/*.html', ['html']);
+});
