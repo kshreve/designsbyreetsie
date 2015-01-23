@@ -6,7 +6,7 @@ angular.module('designsByReetsie')
                 
                 var album = 'ePmjl';
                 if(page == "SoldArt") {
-                    album = 'qiBAL'; //TODO: PUT SOMETHING HERE FOR ANOTHER ALBUM.
+                    album = 'qiBAL';
                 }
                 
                 return $http.get(Constants.BaseUrl.concat(album).concat(Constants.Images));
