@@ -1,14 +1,13 @@
-// TODO: Controllers are defined here by convention. I might have to re-look at this once I start minification of the javascript.
-// During minification, I might have to pass in the parameters so that dependencies are still resolved.
-function HomeController($scope, $location, $http) {
+angular.module('designsByReetsie').controller('HomeController', ['$scope', function($scope) {
     $scope.$parent.Page = 'Home';
-}
+}]);
 
-function AboutController($scope, $location, $http) {
+
+angular.module('designsByReetsie').controller('AboutController', ['$scope', function($scope) {
     $scope.$parent.Page = 'About';
-}
+}]);
 
-function AwardController($scope, ImgurApi) {
+angular.module('designsByReetsie').controller('AwardController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
     $scope.$parent.Page = 'Awards';
     
     ImgurApi($scope.Page).success(function(data) {
@@ -18,9 +17,9 @@ function AwardController($scope, ImgurApi) {
         }
         $scope.images = images;
     });
-}
+}]);
 
-function GourdArtSoldController($scope, ImgurApi) {
+angular.module('designsByReetsie').controller('GourdArtSoldController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
     $scope.$parent.Page = 'SoldArt';
     
     ImgurApi($scope.Page).success(function(data) {
@@ -30,10 +29,9 @@ function GourdArtSoldController($scope, ImgurApi) {
         }
         $scope.images = images;
     });
-    
-}
+}]);
 
-function ContactController($scope, $http) {
+angular.module('designsByReetsie').controller('ContactController', ['$scope', '$http', function($scope, $http) {
     $scope.$parent.Page = 'Contact';
     
     $scope.submit = function() {
@@ -56,4 +54,4 @@ function ContactController($scope, $http) {
                 console.log('error', data, status);
              });
     };
-}
+}]);
