@@ -7,6 +7,8 @@ var notify = require('gulp-notify');
 var minifyHTML = require('gulp-minify-html');
 var del = require('del');
 var livereload = require('gulp-livereload');
+var templateCache = require('gulp-angular-templatecache');
+var obfuscate = require('gulp-obfuscate');
 
 gulp.task('move', function() {
     return gulp.src(['index.html', 'server.js', 'Procfile', 'img/*.*', 'node_modules/**/*.*', 'lib/angular/angular.min.js', 'lib/**/*.*'], {base: './'})
@@ -16,7 +18,8 @@ gulp.task('move', function() {
 gulp.task('scripts', function() {
   return gulp.src('js/*.js')
              .pipe(concat('app.min.js'))
-             /*.pipe(uglify())*/
+             .pipe(uglify())
+             .pipe(obfuscate())
              .pipe(gulp.dest('dist/js'))
              .pipe(livereload())
              .pipe(notify({ message: 'Scripts task complete'}));
@@ -32,7 +35,7 @@ gulp.task('css-lib', function() {
 gulp.task('css', ['css-lib'], function() {
     return gulp.src('css/app.css')
                .pipe(rename('app.min.css'))
-               /*.pipe(minifyCSS())*/
+               .pipe(minifyCSS())
                .pipe(gulp.dest('dist/css/'))
                .pipe(livereload())
                .pipe(notify({message: 'CSS task complete'}));
@@ -40,9 +43,10 @@ gulp.task('css', ['css-lib'], function() {
 
 gulp.task('html', function() {
     return gulp.src('partials/*.html')
-               .pipe(rename('partials.html'))
-               /*.pipe(minifyHTML())*/
+               .pipe(templateCache({module: 'designsByReetsie'}))
                .pipe(gulp.dest('dist/partials'))
+               .pipe(uglify())
+               .pipe(obfuscate())
                .pipe(livereload())
                .pipe(notify({message: 'html-partial task complete'}));
 });
