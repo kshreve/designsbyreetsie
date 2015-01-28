@@ -11,7 +11,7 @@ var templateCache = require('gulp-angular-templatecache');
 var obfuscate = require('gulp-obfuscate');
 
 gulp.task('move', function() {
-    return gulp.src(['index.html', 'server.js', 'Procfile', 'img/*.*', 'node_modules/**/*.*', 'lib/angular/angular.min.js', 'lib/**/*.*'], {base: './'})
+    return gulp.src(['index.html', 'server.js', 'img/*.*', 'node_modules/**/*.*', 'lib/angular/angular.min.js', 'lib/**/*.*'], {base: './'})
                .pipe(gulp.dest('dist'));
 });
 
