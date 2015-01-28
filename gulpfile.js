@@ -19,7 +19,7 @@ gulp.task('scripts', function() {
   return gulp.src('js/*.js')
              .pipe(concat('app.min.js'))
              .pipe(uglify())
-             .pipe(obfuscate({exclude: ['X-Requested-With', 'Authorization']}))
+             //.pipe(obfuscate({exclude: ['X-Requested-With', 'Authorization']}))
              .pipe(gulp.dest('dist/js'))
              .pipe(livereload())
              .pipe(notify({ message: 'Scripts task complete'}));
