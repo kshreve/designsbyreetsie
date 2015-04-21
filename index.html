@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <!--suppress HtmlUnknownAnchorTarget -->
 <html data-ng-app="designsByReetsie">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Designs by Reetsie - Gourd Art</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/zimit.min.css">
     <link rel="stylesheet" type="text/css" href="css/app.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/responsive-nav/responsive-nav.css">
 
+    <script src="lib/responsive-nav/responsive-nav.js" type="text/javascript"></script>
     <script src="lib/angular/angular.min.js" type="text/javascript"></script>
     <script src="lib/angular/angular-route.min.js" type="text/javascript"></script>
     <script src="js/app.min.js"></script>
     <script src="partials/templates.js"></script>
-  </head>
-  <body class="row body">
-    <header class="c12"><div>Designs by Reetsie</div></header>
-    <main class="c12">
-        <nav class="12">
-            <ul id="menu">
-                <li><a id="Home" href="#/Home" data-ng-class="{'active': Page=='Home'}">Home</a></li>
-                <li><a id="About" href="#/About" data-ng-class="{'active': Page=='About'}">About Reetsie</a></li>
-                <li><a href="#/Awards" data-ng-class="{'active': Page=='Awards'}">Award Winning Gourds</a></li>
-                <li><a href="#/SoldArt" data-ng-class="{'active': Page=='SoldArt'}">Gourd Art Sold</a></li>
-                <li><a href="#/Contact" data-ng-class="{'active': Page=='Contact'}">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="viewPort" data-ng-view></div>
-    </main>
-    <footer class="c12">
-        <div class="c12">Natural Wonders</div>
-        <div class="c12">ph: (503) 472-7337</div>
-        <div class="c12 italic">alt: (760) 200-2964</div>
-        <address class="c12"><a class="email" href="mailto:TWNMEADOW@aol.com">TWNMEADOW@aol.com</a></address>
-    </footer>
+</head>
+<body class="row body" ng-controller="Main">
+<header class="c12">
+    <div>Designs by Reetsie</div>
+</header>
+<main class="c12">
+    <nav class="nav-collapse">
+        <ul ng-repeat="route in routes">
+            <li><a ng-href="{{route.url}}" data-ng-class="isActive(route.name)">{{route.name}}</a></li>
+            <!--<li><a href="#/About" data-ng-class="{'active': Page=='About'}">About Reetsie</a></li>
+            <li><a href="#/Awards" data-ng-class="{'active': Page=='Awards'}">Award Winning Gourds</a></li>
+            <li><a href="#/SoldArt" data-ng-class="{'active': Page=='SoldArt'}">Gourd Art Sold</a></li>
+            <li><a href="#/Contact" data-ng-class="{'active': Page=='Contact'}">Contact</a></li>-->
+        </ul>
 
+    </nav>
+    <div class="viewPort" data-ng-view></div>
+</main>
+<footer class="c12">
+    <div class="c12">Natural Wonders</div>
+    <div class="c12">ph: (503) 472-7337</div>
+    <div class="c12 italic">alt: (760) 200-2964</div>
+    <address class="c12"><a class="email" href="mailto:TWNMEADOW@aol.com">TWNMEADOW@aol.com</a></address>
+</footer>
 
-  </body>
+</body>
 </html>
