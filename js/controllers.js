@@ -1,11 +1,15 @@
 angular.module('designsByReetsie').controller('Main', ['$scope', '$route', function (scope, $route) {
     scope.routes = [];
     angular.forEach($route.routes, function (config, route) {
-        scope.routes.push({url: "#" + route, name: config.name});
+        if(config.hasOwnProperty('caseInsensitiveMatch') && config.name) {
+            scope.routes.push({url: "#" + route, name: config.name});
+        }
     });
 
     scope.isActive = function(name) {
-        return name === $route.current.$$route.name ? 'active' : '';
+        if($route.current) {
+            return name === $route.current.$$route.name ? 'active' : '';    
+        }
     };
 }]);
 

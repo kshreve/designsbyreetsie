@@ -17,15 +17,15 @@ gulp.task('move', function () {
 gulp.task('scripts', function () {
     return gulp.src('js/*.js')
         .pipe(concat('app.min.js'))
-        .pipe(uglify())
+        /*.pipe(uglify())*/
         .pipe(gulp.dest('dist/js'))
         .pipe(livereload())
         .pipe(notify({ message: 'Scripts task complete'}));
 });
 
 gulp.task('css-lib', function () {
-    return gulp.src(['css/zimit.min.css'], {base: './'})
-        .pipe(rename('zimit.min.css'))
+    return gulp.src(['css/normalize.css', 'css/skeleton.css'], {base: './'})
+        .pipe(rename('library.css'))
         .pipe(gulp.dest('dist/css/'))
         .pipe(notify({message: 'css-library task complete'}));
 });
