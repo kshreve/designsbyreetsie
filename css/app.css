@@ -1,39 +1,37 @@
-html
-{
+html {
     background-color: #D7AD67;
     z-index: 0;
 }
 
-header 
-{
+header {
     background-color: #790000;
     width: auto;
     font-family: Georgia, serif;
     font-size: 24px;
     color: #FFFFFF;
     height: 69px;
+    padding-top: 10px;
 }
 
 header span {
     margin: 20px;
 }
 
-.row div 
-{
+.row div {
     margin-bottom: 0.5em;
 }
 
-nav 
-{
+nav {
     background-color: #E5CA9C;
     margin: 0;
-    color: #fff; 
+    color: #fff;
+    padding: 10px;
 }
 
 nav ul {
-      margin: 0 10px;
-      padding: 0;
-      list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    list-style: none;
 }
 
 nav ul li a {
@@ -49,7 +47,11 @@ nav ul li a {
     font-size: 16px;
 }
 
-nav li .active {
+nav ul li {
+    margin-bottom: 0;
+}
+
+nav ul li .active {
     color: #FFFFFF;
 }
 
@@ -58,20 +60,18 @@ body {
     height: auto;
 }
 
-main
-{
+main {
     width: 100%;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    height:auto;
+    height: auto;
 }
 
-footer
-{
+footer {
     color: #FFFFFF;
     background-color: black;
-    font-size:11px;
+    font-size: 11px;
     padding: 20px;
     border-top: 1px solid #979797;
 }
@@ -80,61 +80,52 @@ footer p {
     margin: 0;
 }
 
-a
-{
+a {
     color: #F7941D;
 }
 
-.viewPort
-{
-    background-color:#FFFFFF;
+.viewPort {
+    background-color: #FFFFFF;
     /*page text*/
-    color:#252525;
+    color: #252525;
     font-family: verdana, arial, sans-serif;
     font-size: 11px;
-    padding: 10px 0px 10px 0px;
+    padding: 10px;
 }
 
-.copyright
-{
-    color:#666666;
+.copyright {
+    color: #666666;
 }
 
-.titleText
-{
+.titleText {
     color: #930;
-    font-family: verdana, geneva;
+    font-family: verdana, geneva, sans-serif;
     font-size: 18px;
 }
 
-.emailForm
-{
-    font-weight:bold;    
+.emailForm {
+    font-weight: bold;
 }
 
-.emailForm ul
-{
+.emailForm ul {
     list-style-type: none;
-	padding-left: 0;
-	margin-left: 0;
+    padding-left: 0;
+    margin-left: 0;
 }
 
-.emailForm ul li
-{
-    font-weight:bold;
-    list-style:none;
+.emailForm ul li {
+    font-weight: bold;
+    list-style: none;
     margin-bottom: 1em;
     margin-left: 1em;
 }
 
-.emailForm ul input
-{
-    margin-left:2em;
+.emailForm ul input {
+    margin-left: 2em;
     margin-bottom: 1em;
 }
 
-.emailForm ul li em
-{
+.emailForm ul li em {
     left: -1em;
     top: -3px;
     font-weight: bold;
@@ -144,28 +135,28 @@ a
     text-align: center;
 }
 
-#message{
-    height:90px;
-    width:300px;
+#message {
+    height: 90px;
+    width: 300px;
 }
 
 figure {
-  float: right;
-  width: 30%;
-  border: thin silver solid;
-  margin: 0.5em;
-  padding: 0.5em;
+    float: right;
+    width: 30%;
+    border: thin silver solid;
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 figcaption {
-  text-align: center;
-  font-style: italic;
-  font-size: smaller;
-  text-indent: 0;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
 }
 
 figure img {
-  width: 100%;
+    width: 100%;
 }
 
 /*used for centering an image, the containing div must have center, and margins auto*/
@@ -193,43 +184,39 @@ figure img {
 
 .video-container iframe {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 
 .menu-toggle {
-  display: none;
-  margin-right: 15px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent; }
+    display: none;
+    background-color: transparent;
+    border: 1px solid transparent;
 }
 
 .menu-toggle__layer {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background-color: #fff;
-  border-radius: 1px; 
-    
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
 }
-  .menu-toggle__layer + .menu-toggle__layer {
+
+.menu-toggle__layer + .menu-toggle__layer {
     margin-top: 6px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 830px) {
+    header span {
+        margin: 0;
+    }
+
     nav {
-      display: none; 
-    } 
-    
+        display: none;
+    }
+
     .menu-toggle {
-      display: inline; 
-    } 
-    
-    .viewPort {
-        padding: 0 10px 0 10px;
-        border: 2px solid red;
+        display: inline;
     }
 }

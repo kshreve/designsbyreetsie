@@ -14,39 +14,31 @@
     <script src="partials/templates.js"></script>
 </head>
 
-<body class="row" ng-controller="Main">
-    <header class="row">
-        <div class="twelve column">
-            <button class="menu-toggle" nav-bar-action>
-                <span class="menu-toggle__layer"></span>
-                <span class="menu-toggle__layer"></span>
-                <span class="menu-toggle__layer"></span>
-            </button>
-            <span>Designs by Reetsie</span>
-        </div>
+<body class="row container" ng-controller="Main">
+    <header class="twelve columns">
+        <button class="menu-toggle" nav-bar-action>
+            <span class="menu-toggle__layer"></span>
+            <span class="menu-toggle__layer"></span>
+            <span class="menu-toggle__layer"></span>
+        </button>
+        <span>Designs by Reetsie</span>
     </header>
-    
-    <main class="row">
-        <nav class="navbar twelve columns">
-            <ul>
-                <li ng-repeat="route in routes" class>
-                    <a ng-href="{{route.url}}" ng-class="isActive(route.name)">{{route.name}}</a>
-                </li>
-            </ul>
-    
-        </nav>
-        <div class="viewPort" ng-view></div>
-    </main>
-    
-    <footer class="row">
-        <div class="twelve columns">
-            <p>Natural Wonders</p>
-            <p>ph: (503) 472-7337</p>
-            <p class="italic">alt: (760) 200-2964</p>
-            <address>
-                <a class="email" href="mailto:TWNMEADOW@aol.com">TWNMEADOW@aol.com</a>
-            </address>    
-        </div>
+
+    <nav class="twelve columns">
+        <ul>
+            <li ng-repeat="route in routes">
+                <a ng-href="{{route.url}}" ng-class="isActive(route.name)">{{route.name}}</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="twelve columns viewPort" ng-view></main>
+
+    <footer class="twelve columns">
+        <p>Natural Wonders</p>
+        <p>ph: (503) 472-7337</p>
+        <p class="italic">alt: (760) 200-2964</p>
+        <address><a class="email" href="mailto:TWNMEADOW@aol.com">TWNMEADOW@aol.com</a></address>
     </footer>
 </body>
 </html>
