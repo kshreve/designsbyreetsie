@@ -10,14 +10,14 @@ header {
     font-size: 24px;
     color: #FFFFFF;
     height: 69px;
-    padding-top: 10px;
+    overflow: hidden;
 }
 
-header span {
-    margin: 20px;
+header p {
+    margin: 16.5px 0;
 }
 
-.row div {
+p {
     margin-bottom: 0.5em;
 }
 
@@ -207,16 +207,22 @@ figure img {
     margin-top: 6px;
 }
 
-@media screen and (max-width: 830px) {
-    header span {
-        margin: 0;
-    }
+.routeName {
+    color: #b66263;
+    margin-right: 4%;
+}
 
+@media screen and (max-width: 830px) {
     nav {
         display: none;
     }
-
+    
     .menu-toggle {
-        display: inline;
+        display: block;
+        margin: 16.5px 0;
+    }
+    
+    .routeName {
+        display: none;
     }
 }

@@ -15,13 +15,14 @@
 </head>
 
 <body class="row container" ng-controller="Main">
-    <header class="twelve columns">
-        <button class="menu-toggle" nav-bar-action>
+    <header>
+        <button class="menu-toggle one-third column" nav-bar-action>
             <span class="menu-toggle__layer"></span>
             <span class="menu-toggle__layer"></span>
             <span class="menu-toggle__layer"></span>
-        </button>
-        <span>Designs by Reetsie</span>
+        </button>  
+        <p class="two-thirds column">Designs by Reetsie</p>
+        <p class="routeName u-pull-right">{{routeName}}</p>
     </header>
 
     <nav class="twelve columns">
@@ -31,7 +32,6 @@
             </li>
         </ul>
     </nav>
-
     <main class="twelve columns viewPort" ng-view></main>
 
     <footer class="twelve columns">

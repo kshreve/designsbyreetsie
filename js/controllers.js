@@ -6,8 +6,16 @@ angular.module('designsByReetsie').controller('Main', ['$scope', '$route', funct
         }
     });
 
+    var stringOrBackup = function(string, backupString) {
+        if(string === null || string === undefined) {
+            return backupString;
+        } 
+        return string;
+    };
+    
     scope.isActive = function(name) {
         if($route.current) {
+            scope.routeName = stringOrBackup($route.current.$$route.headerName, $route.current.$$route.name);
             return name === $route.current.$$route.name ? 'active' : '';    
         }
     };

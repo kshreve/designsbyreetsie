@@ -1,6 +1,6 @@
 angular.module('designsByReetsie', ['ngRoute'])
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/Home', {templateUrl: 'home.html', name: 'Home'})
+        $routeProvider.when('/Home', {templateUrl: 'home.html', name: 'Home', headerName:''})
             .when('/About', {templateUrl: 'about.html', name: 'About Reetsie'})
             .when('/Awards', {templateUrl: 'awards.html', controller: 'Award', name: 'Award Winning Gourds'})
             .when('/SoldArt', {templateUrl: 'gourdartsold.html', controller: 'GourdArtSold', name: 'Gourd Art Sold'})
