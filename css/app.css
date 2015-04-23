@@ -212,6 +212,18 @@ figure img {
     margin-right: 4%;
 }
 
+input:disabled {
+    background: #dddddd;
+}
+
+button:disabled {
+    background: #dddddd;
+}
+
+.spinner {
+    padding: 10px 0 0 10px;
+}
+
 @media screen and (max-width: 830px) {
     nav {
         display: none;

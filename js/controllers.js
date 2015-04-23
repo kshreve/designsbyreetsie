@@ -45,24 +45,5 @@ angular.module('designsByReetsie').controller('GourdArtSold', ['$scope', 'ImgurA
 }]);
 
 angular.module('designsByReetsie').controller('Contact', ['$scope', '$http', function (scope, http) {
-    scope.submit = function () {
-        var messageData = {
-            from: scope.emailForm.emailAddress,
-            name: scope.emailForm.fname + ' ' + scope.emailForm.lname,
-            text: scope.emailForm.message,
-            phone: scope.emailForm.phone
-        };
-
-        http.post("/sendMail", messageData)
-            .success(function (data, status, headers, config) {
-                scope.emailForm.emailAddress = '';
-                scope.emailForm.fname = '';
-                scope.emailForm.lname = '';
-                scope.emailForm.message = '';
-                scope.emailForm.phone = '';
-            })
-            .error(function (data, status, headers, config) {
-                console.log('error', data, status);
-            });
-    };
+    
 }]);
