@@ -1,57 +1,49 @@
-angular.module('designsByReetsie').controller('HomeController', ['$scope', function($scope) {
-    $scope.$parent.Page = 'Home';
-}]);
-
-
-angular.module('designsByReetsie').controller('AboutController', ['$scope', function($scope) {
-    $scope.$parent.Page = 'About';
-}]);
-
-angular.module('designsByReetsie').controller('AwardController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
-    $scope.$parent.Page = 'Awards';
-    
-    ImgurApi($scope.Page).success(function(data) {
-        var images = data.data;
-        for(var i=0;i<images.length; i++){
-            images[i].link = images[i].link.replace('http://', '');
+angular.module('designsByReetsie').controller('Main', ['$scope', '$route', function (scope, $route) {
+    scope.routes = [];
+    angular.forEach($route.routes, function (config, route) {
+        if(config.hasOwnProperty('caseInsensitiveMatch') && config.name) {
+            scope.routes.push({url: "#" + route, name: config.name});
         }
-        $scope.images = images;
     });
-}]);
 
-angular.module('designsByReetsie').controller('GourdArtSoldController', ['$scope', 'ImgurApi', function($scope, ImgurApi) {
-    $scope.$parent.Page = 'SoldArt';
-    
-    ImgurApi($scope.Page).success(function(data) {
-        var images = data.data;
-        for(var i=0;i<images.length; i++){
-            images[i].link = images[i].link.replace('http://', '');
-        }
-        $scope.images = images;
-    });
-}]);
-
-angular.module('designsByReetsie').controller('ContactController', ['$scope', '$http', function($scope, $http) {
-    $scope.$parent.Page = 'Contact';
-    
-    $scope.submit = function() {
-        var messageData = {
-            from: $scope.emailForm.emailAddress,
-            name: $scope.emailForm.fname + ' ' + $scope.emailForm.lname,
-            text: $scope.emailForm.message,
-            phone: $scope.emailForm.phone
-        };
-
-        $http.post("/sendMail", messageData)
-             .success(function(data, status, headers, config) {
-                $scope.emailForm.emailAddress='';
-                $scope.emailForm.fname='';
-                $scope.emailForm.lname='';
-                $scope.emailForm.message='';
-                $scope.emailForm.phone='';
-             })
-             .error(function(data, status, headers, config) {
-                console.log('error', data, status);
-             });
+    var stringOrBackup = function(string, backupString) {
+        if(string === null || string === undefined) {
+            return backupString;
+        } 
+        return string;
     };
+    
+    scope.isActive = function(name) {
+        if($route.current) {
+            scope.routeName = stringOrBackup($route.current.$$route.headerName, $route.current.$$route.name);
+            return name === $route.current.$$route.name ? 'active' : '';    
+        }
+    };
+}]);
+
+angular.module('designsByReetsie').controller('Award', ['$scope', 'ImgurApi', function (scope, ImgurApi) {
+
+    ImgurApi().success(function (data) {
+        var images = data.data;
+        for (var i = 0, il = images.length; i < il; i++) {
+            images[i].link = images[i].link.replace('http://', '');
+        }
+
+        scope.images = images;
+    });
+}]);
+
+angular.module('designsByReetsie').controller('GourdArtSold', ['$scope', 'ImgurApi', function (scope, ImgurApi) {
+    ImgurApi().success(function (data) {
+        var images = data.data;
+        for (var i = 0, il = images.length; i < il; i++) {
+            images[i].link = images[i].link.replace('http://', '');
+        }
+
+        scope.images = images;
+    });
+}]);
+
+angular.module('designsByReetsie').controller('Contact', ['$scope', '$http', function (scope, http) {
+    
 }]);

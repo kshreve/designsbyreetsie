@@ -1,18 +1,16 @@
-<div>
-    <div class="row">
-        <div class="c12">
-            <div class="c12 titleText">Thank you!</div>
-            <div class="c12">Reetsie extends her most sincere thanks to all those who have already purchased her gourd art.</div>
-            <div class="c12">If you would like to learn how you too, may purchase Reetsie's gourd art, please <a href="#/Contact">contact Reetsie directly.</a></div>
-            <div class="c12"><!--blank--></div>
-            <div class="c12">
-                <figure class="c3" ng-repeat="image in images">
-                    <a href="{{'https://'+image.link}}">
-                        <img ng-src="{{'https://'+image.link}}" alt="{{image.title}}"></img>
-                    </a>
-                    <figcaption>{{image.description.trim()}}</figcaption>
-                </figure>
-            </div>
+<div class="row">
+    <div class="twelve columns">
+        <p class="titleText">Thank you!</p>
+        <p>Reetsie extends her most sincere thanks to all those who have already purchased her gourd art.</p>
+        <p>If you would like to learn how you too, may purchase Reetsie's gourd art, please <a href="#/Contact">contact Reetsie directly.</a></p>
+        <p><!--blank--></p>
+        <div class="row">
+            <figure class="three columns" ng-repeat="image in images">
+                <a href="{{'https://'+image.link}}">
+                    <img ng-src="{{'https://'+image.link}}" alt="{{image.title}}"></img>
+                </a>
+                <figcaption>{{image.description.trim()}}</figcaption>
+            </figure>
         </div>
     </div>
 </div>
