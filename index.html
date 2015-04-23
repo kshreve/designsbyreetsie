@@ -25,9 +25,9 @@
         <p class="routeName u-pull-right">{{routeName}}</p>
     </header>
 
-    <nav class="twelve columns">
+    <nav class="twelve columns" nav-bar>
         <ul>
-            <li ng-repeat="route in routes">
+            <li ng-repeat="route in routes" nav-bar-action>
                 <a ng-href="{{route.url}}" ng-class="isActive(route.name)">{{route.name}}</a>
             </li>
         </ul>

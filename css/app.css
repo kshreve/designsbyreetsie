@@ -227,14 +227,33 @@ button:disabled {
 @media screen and (max-width: 830px) {
     nav {
         display: none;
+        width: 300px;
+    }
+    
+    .in {
+        display: block;
+    }
+    
+    nav ul li a {
+        float: none;
+        border-width: 0 0 1px 0;
     }
     
     .menu-toggle {
         display: block;
         margin: 16.5px 0;
+        width: 5%;
     }
     
     .routeName {
         display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+        header p {
+        width: 50% !important; 
+        font-size: medium;
+        padding-top: 5px;
     }
 }

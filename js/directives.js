@@ -31,3 +31,29 @@ angular.module('designsByReetsie').directive('email', ['$http', function(http) {
         }
     };
 }]);
+
+angular.module('designsByReetsie').directive('navBarAction', [function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attributes) {
+            element.on('click', function () {
+                scope.show = !scope.show;
+                scope.$emit('nav-bar-action-toggle', {show: scope.show});
+            });
+        }
+    };
+}]);
+
+angular.module('designsByReetsie').directive('navBar', [function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attributes) {
+            scope.$on('nav-bar-action-toggle', function (event, args) {
+                args.show ? element.addClass('in') : element.removeClass('in');
+            });
+        }
+    };
+}]);
+
+
+    
