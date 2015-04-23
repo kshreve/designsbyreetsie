@@ -32,18 +32,6 @@ angular.module('designsByReetsie').directive('email', ['$http', function(http) {
     };
 }]);
 
-angular.module('designsByReetsie').directive('navBarAction', [function () {
-    return {
-        restrict: 'A',
-        link: function (scope, element, attributes) {
-            element.on('click', function () {
-                scope.show = !scope.show;
-                scope.$emit('nav-bar-action-toggle', {show: scope.show});
-            });
-        }
-    };
-}]);
-
 angular.module('designsByReetsie').directive('navBar', [function () {
     return {
         restrict: 'A',
@@ -55,5 +43,26 @@ angular.module('designsByReetsie').directive('navBar', [function () {
     };
 }]);
 
+angular.module('designsByReetsie').directive('navBarOption', [function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attributes) {
+            element.on('click', function () {
+                scope.$emit('nav-bar-action-toggle', {show: false});
+            });
+        }
+    };
+}]);
 
+angular.module('designsByReetsie').directive('navBarAction', [function () {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attributes) {
+            element.on('click', function () {
+                scope.show = !scope.show;
+                scope.$emit('nav-bar-action-toggle', {show: scope.show});
+            });
+        }
+    };
+}]);
     
