@@ -43,17 +43,6 @@ angular.module('designsByReetsie').directive('navBar', [function () {
     };
 }]);
 
-/*angular.module('designsByReetsie').directive('navBarOption', [function () {
-    return {
-        restrict: 'A',
-        link: function (scope, element, attributes) {
-            element.on('click', function () {
-                scope.$emit('nav-bar-option-toggle', {show: false});
-            });
-        }
-    };
-}]);*/
-
 angular.module('designsByReetsie').directive('navBarAction', [function () {
     return {
         restrict: 'A',
