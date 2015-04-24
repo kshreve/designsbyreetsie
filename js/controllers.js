@@ -14,7 +14,7 @@ angular.module('designsByReetsie').controller('Main', ['$scope', '$route', funct
     };
     
     scope.isActive = function(name) {
-        if($route.current) {
+        if($route.current && $route.current.$$route.headerName) {
             scope.routeName = stringOrBackup($route.current.$$route.headerName, $route.current.$$route.name);
             return name === $route.current.$$route.name ? 'active' : '';    
         }
