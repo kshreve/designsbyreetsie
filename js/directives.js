@@ -58,6 +58,7 @@ angular.module('designsByReetsie').directive('navBarAction', [function () {
     return {
         restrict: 'A',
         link: function (scope, element, attributes) {
+            scope.show = false;
             element.on('click', function () {
                 scope.show = !scope.show;
                 scope.$emit('nav-bar-action-toggle', {show: scope.show});
