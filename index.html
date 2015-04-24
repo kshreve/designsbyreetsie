@@ -27,7 +27,7 @@
 
     <nav class="twelve columns" nav-bar>
         <ul>
-            <li ng-repeat="route in routes" nav-bar-option>
+            <li ng-repeat="route in routes" nav-bar-action>
                 <a ng-href="{{route.url}}" ng-class="isActive(route.name)">{{route.name}}</a>
             </li>
         </ul>
