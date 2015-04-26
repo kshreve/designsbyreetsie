@@ -17,7 +17,7 @@ angular.module('designsByReetsie').controller('Main', ['$scope', '$route', funct
     scope.isActive = function(name) {
         if($route.current) {
             scope.routeName = headerOrBackup();
-            return name === $route.current.$$route.name ? 'active' : '';    
+            return name === $route.current.$$route.name ? 'active' : '';
         }
     };
 }]);
