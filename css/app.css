@@ -13,8 +13,13 @@ header {
     overflow: hidden;
 }
 
+.designs{
+    font-size: 40px;
+}
+
 header p {
-    margin: 16.5px 0;
+    /*margin: 16.5px 0;*/
+    font-family: 'Bad Script', cursive;
 }
 
 p {
@@ -246,9 +251,15 @@ button:disabled {
 }
 
 @media screen and (max-width: 550px) {
-        header p {
+    header p {
         width: 50% !important; 
-        font-size: medium;
+        font-size: medium !important;
         padding-top: 5px;
+        margin-top: 16.5px;
     }
+
+    .designs {
+        font-size: 16px;
+    }
+
 }
