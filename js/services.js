@@ -1,11 +1,11 @@
 angular.module('designsByReetsie')
-    .factory('ImgurApi', ['$http', 'Constants' , function (http, Constants) {
-        return function (page) {
+    .factory('ImgurApi', ['$http', '$route', 'Constants', function (http, route, Constants) {
+        return function () {
             http.defaults.headers.common['Authorization'] = Constants.ClientId;
             delete http.defaults.headers.common['X-Requested-With'];
 
             var album = 'ePmjl';
-            if (page == "SoldArt") {
+            if (route.current.$$route.name == "SoldArt") {
                 album = 'qiBAL';
             }
 

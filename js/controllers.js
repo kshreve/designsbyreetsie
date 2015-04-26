@@ -6,16 +6,17 @@ angular.module('designsByReetsie').controller('Main', ['$scope', '$route', funct
         }
     });
 
-    var stringOrBackup = function(string, backupString) {
-        if(string === null || string === undefined) {
-            return backupString;
-        } 
-        return string;
+    var headerOrBackup = function() {
+        if($route.current.$$route.headerName === null || $route.current.$$route.headerName === undefined) {
+            return $route.current.$$route.name;
+        }
+
+        return $route.current.$$route.headerName;
     };
     
     scope.isActive = function(name) {
         if($route.current) {
-            scope.routeName = stringOrBackup($route.current.$$route.headerName, $route.current.$$route.name);
+            scope.routeName = headerOrBackup();
             return name === $route.current.$$route.name ? 'active' : '';    
         }
     };
