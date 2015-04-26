@@ -210,6 +210,7 @@ figure img {
 .routeName {
     color: #b66263;
     margin-right: 4%;
+    margin-top: 16.5px;
 }
 
 input:disabled {
@@ -261,5 +262,4 @@ button:disabled {
     .designs {
         font-size: 16px;
     }
-
 }
