@@ -1,6 +1,6 @@
 <form name="emailForm" class="emailForm" method="post" ng-submit="submit()" novalidate>
     <ul>
-        <li><div><em>*</em>First Name:</div></li>
+        <li><em>*</em>First Name:</li>
         <input type="text" ng-model="emailForm.fname" required ng-disabled="disabled">
         
         <li><em>*</em>Last Name:</li>
@@ -9,13 +9,13 @@
         <li><em>*</em>Email:</li>
         <input type="email" ng-model="emailForm.emailAddress" required ng-disabled="disabled">
 
-        <li><div>Best Phone Number to Reach You (Please include area code):</div></li>
+        <li>Best Phone Number to Reach You (Please include area code):</li>
         <input type="text" ng-model="emailForm.phone" ng-disabled="disabled">
         
-        <li><div><b>Are you interested in purchasing a gourd, commissioned artwork, or have a general inquiry?</b></div></li>
+        <li><b>Are you interested in purchasing a gourd, commissioned artwork, or have a general inquiry?</b></li>
         <input type="text" ng-model="emailForm.message" height="90px" ng-disabled="disabled">
         
-        <li><div><b>Submit Your Message:</b></div></li>
-        <li class="row"><button type="submit" value="submit" ng-disabled="disabled">Submit!</button><img class="spinner" src="img/spinner.gif" ng-show="disabled" /></li>
+        <li><b>Submit Your Message:</b></li>
+        <li class="row"><button class="submitButton" type="submit" value="submit" ng-disabled="disabled">Submit!</button><img class="spinner" src="img/spinner.gif" ng-show="disabled" /></li>
     </ul>
 </form>

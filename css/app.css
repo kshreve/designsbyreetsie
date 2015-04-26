@@ -225,6 +225,10 @@ button:disabled {
     padding: 10px 0 0 10px;
 }
 
+.submitButton {
+    margin-left: 2em;
+}
+
 @media screen and (max-width: 830px) {
     nav {
         display: none;
