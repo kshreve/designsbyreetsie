@@ -26,16 +26,16 @@
         <p class="routeName u-pull-right">{{routeName}}</p>
     </header>
 
-    <nav class="twelve columns" nav-bar>
+    <nav nav-bar>
         <ul>
             <li ng-repeat="route in routes" nav-bar-action>
                 <a ng-href="{{route.url}}" ng-class="isActive(route.name)">{{route.name}}</a>
             </li>
         </ul>
     </nav>
-    <main class="twelve columns viewPort" ng-view></main>
+    <div class="viewPort" ng-view></div>
 
-    <footer class="twelve columns">
+    <footer>
         <p>Natural Wonders</p>
         <p>ph: (503) 472-7337</p>
         <p class="italic">alt: (760) 200-2964</p>
