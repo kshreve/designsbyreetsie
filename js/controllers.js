@@ -7,11 +7,13 @@ angular.module('designsByReetsie').controller('Main', ['$scope', '$route', funct
     });
 
     var headerOrBackup = function() {
-        if($route.current.$$route.headerName === null || $route.current.$$route.headerName === undefined) {
-            return $route.current.$$route.name;
-        }
+        if($route.current.$$route !== undefined) {
+            if($route.current.$$route.headerName === null || $route.current.$$route.headerName === undefined) {
+                return $route.current.$$route.name;
+            }
 
-        return $route.current.$$route.headerName;
+            return $route.current.$$route.headerName;
+        }
     };
     
     scope.isActive = function(name) {
