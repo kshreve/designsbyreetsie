@@ -227,7 +227,6 @@ button:disabled {
 @media screen and (max-width: 830px) {
     nav {
         display: none;
-        width: 300px;
     }
 
     nav ul li {
