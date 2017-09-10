@@ -6,8 +6,8 @@
         <p><!--blank--></p>
         <div class="row">
             <figure class="three columns" ng-repeat="image in images">
-                <a href="{{'https://'+image.link}}">
-                    <img ng-src="{{'https://'+image.link}}" alt="{{image.title}}"></img>
+                <a href="{{image.link}}">
+                    <img ng-src="{{image.link}}" alt="{{image.title}}"></img>
                 </a>
                 <figcaption>{{image.description.trim()}}</figcaption>
             </figure>
