@@ -1,20 +1,20 @@
-<form name="emailForm" class="emailForm" method="post" ng-submit="submit()" novalidate>
+<form name="emailForm" class="emailForm" method="post" data-netlify="true">
     <ul>
         <li><em>*</em>First Name:</li>
         <input type="text" ng-model="emailForm.fname" required ng-disabled="disabled">
-        
+
         <li><em>*</em>Last Name:</li>
         <input type="text" ng-model="emailForm.lname" required ng-disabled="disabled">
-        
+
         <li><em>*</em>Email:</li>
         <input type="email" ng-model="emailForm.emailAddress" required ng-disabled="disabled">
 
         <li>Best Phone Number to Reach You (Please include area code):</li>
         <input type="text" ng-model="emailForm.phone" ng-disabled="disabled">
-        
+
         <li><b>Are you interested in purchasing a gourd, commissioned artwork, or have a general inquiry?</b></li>
         <input type="text" ng-model="emailForm.message" height="90px" ng-disabled="disabled">
-        
+
         <li><b>Submit Your Message:</b></li>
         <li class="row"><button class="submitButton" type="submit" value="submit" ng-disabled="disabled">Submit!</button><img class="spinner" src="img/spinner.gif" ng-show="disabled" /></li>
     </ul>
