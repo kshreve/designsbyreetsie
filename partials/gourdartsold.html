@@ -1,13 +1,15 @@
 <div class="row">
     <div class="twelve columns">
         <p class="titleText">Thank you!</p>
-        <p>Reetsie extends her most sincere thanks to all those who have already purchased her gourd art.</p>
-        <p>If you would like to learn how you too, may purchase Reetsie's gourd art, please <a href="#/Contact">contact Reetsie directly.</a></p>
+        <p>Reetsie extends her most sincere thanks to all those who have already purchased her gourd
+            art.</p>
+        <p>If you would like to learn how you too, may purchase Reetsie's gourd art, please <a
+                href="#/Contact">contact Reetsie directly.</a></p>
         <p><!--blank--></p>
         <div class="row">
             <figure class="three columns" ng-repeat="image in images">
                 <a href="{{image.link}}">
-                    <img ng-src="{{image.link}}" alt="{{image.title}}"></img>
+                    <img ng-src="{{image.link}}" alt="{{image.title}}" />
                 </a>
                 <figcaption>{{image.description.trim()}}</figcaption>
             </figure>

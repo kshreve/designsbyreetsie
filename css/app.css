@@ -13,7 +13,7 @@ header {
     overflow: hidden;
 }
 
-.designs{
+.designs {
     font-size: 40px;
 }
 
@@ -29,7 +29,7 @@ p {
 nav {
     background-color: #E5CA9C;
     margin: 0;
-    color: #fff;
+    color: #FFFFFF;
     padding: 10px;
 }
 
@@ -98,7 +98,7 @@ a {
 }
 
 .titleText {
-    color: #930;
+    color: #993300;
     font-family: verdana, geneva, sans-serif;
     font-size: 18px;
 }
@@ -195,7 +195,7 @@ figure img {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 
 .menu-toggle__layer + .menu-toggle__layer {
@@ -203,17 +203,17 @@ figure img {
 }
 
 .routeName {
-    color: #b66263;
+    color: #B66263;
     margin-right: 4%;
     margin-top: 16.5px;
 }
 
 input:disabled {
-    background: #dddddd;
+    background: #DDDDDD;
 }
 
 button:disabled {
-    background: #dddddd;
+    background: #DDDDDD;
 }
 
 .spinner {
@@ -232,17 +232,17 @@ button:disabled {
     nav ul li {
         display: block;
     }
-    
+
     .in {
         display: block;
     }
-    
+
     .menu-toggle {
         display: block;
         margin: 16.5px 0;
         width: 5%;
     }
-    
+
     .routeName {
         display: none;
     }
@@ -250,7 +250,7 @@ button:disabled {
 
 @media screen and (max-width: 550px) {
     header p {
-        width: 50% !important; 
+        width: 50% !important;
         font-size: medium !important;
         padding-top: 5px;
         margin-top: 16.5px;
