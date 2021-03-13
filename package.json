@@ -26,7 +26,7 @@
     "gulp": "3.8.7",
     "gulp-angular-templatecache": "1.5.0",
     "gulp-concat": "2.4.3",
-    "gulp-livereload": "3.5.0",
+    "gulp-livereload": "4.0.2",
     "gulp-minify-css": "0.4.2",
     "gulp-notify": "2.1.0",
     "gulp-obfuscate": "0.2.9",
