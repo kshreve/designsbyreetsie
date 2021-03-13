@@ -1324,15 +1324,7 @@ gulp-angular-templatecache@1.5.0:
     js-string-escape "~1.0.0"
     path "0.x"
 
-gulp-concat@2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/gulp-concat/-/gulp-concat-2.4.3.tgz#dd913c3773b02f9dfb3f70e30215dc07a5cf32f7"
-  dependencies:
-    concat-with-sourcemaps "^1.0.0"
-    gulp-util "^3.0.1"
-    through "^2.3.4"
-
-gulp-concat@2.x:
+gulp-concat@2.6.1, gulp-concat@2.x:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/gulp-concat/-/gulp-concat-2.6.1.tgz#633d16c95d88504628ad02665663cee5a4793353"
   dependencies:
@@ -1426,7 +1418,7 @@ gulp-uglify@1.1.0:
     uglify-js "2.4.16"
     vinyl-sourcemaps-apply ">=0.1.1 <0.2.0-0"
 
-gulp-util@3.x, "gulp-util@>=3.0.0 <4.0.0-0", gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.2, gulp-util@~3.0.1:
+gulp-util@3.x, "gulp-util@>=3.0.0 <4.0.0-0", gulp-util@^3.0.0, gulp-util@^3.0.2, gulp-util@~3.0.1:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -4037,7 +4029,7 @@ through2@~0.4.1:
     readable-stream "~1.0.17"
     xtend "~2.1.1"
 
-through@2, "through@>=2.2.7 <3", through@^2.3.4, through@^2.3.8, through@~2.3, through@~2.3.4:
+through@2, "through@>=2.2.7 <3", through@^2.3.8, through@~2.3, through@~2.3.4:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
