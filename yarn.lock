@@ -4023,7 +4023,7 @@ through2@^1.0.0:
     readable-stream ">=1.1.13-1 <1.2.0-0"
     xtend ">=4.0.0 <4.1.0-0"
 
-through2@^2.0.0:
+through2@^2.0.0, through2@^2.0.3:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
   dependencies:
@@ -4251,12 +4251,12 @@ vinyl-fs@^0.3.0:
     through2 "^0.6.1"
     vinyl "^0.4.0"
 
-vinyl-source-stream@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vinyl-source-stream/-/vinyl-source-stream-1.0.0.tgz#78e2030826f5b55cf96b102741f0abf1c411b9bb"
+vinyl-source-stream@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vinyl-source-stream/-/vinyl-source-stream-2.0.0.tgz#f38a5afb9dd1e93b65d550469ac6182ac4f54b8e"
   dependencies:
-    through2 "^0.6.1"
-    vinyl "^0.4.3"
+    through2 "^2.0.3"
+    vinyl "^2.1.0"
 
 "vinyl-sourcemaps-apply@>=0.1.1 <0.2.0-0", vinyl-sourcemaps-apply@^0.1.4:
   version "0.1.4"
@@ -4270,7 +4270,7 @@ vinyl@^0.2.1:
   dependencies:
     clone-stats "~0.0.1"
 
-vinyl@^0.4.0, vinyl@^0.4.2, vinyl@^0.4.3:
+vinyl@^0.4.0, vinyl@^0.4.2:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/vinyl/-/vinyl-0.4.6.tgz#2f356c87a550a255461f36bbeb2a5ba8bf784847"
   dependencies:
@@ -4285,9 +4285,9 @@ vinyl@^0.5.0:
     clone-stats "^0.0.1"
     replace-ext "0.0.1"
 
-vinyl@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/vinyl/-/vinyl-2.2.0.tgz#d85b07da96e458d25b2ffe19fece9f2caa13ed86"
+vinyl@^2.0.0, vinyl@^2.1.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/vinyl/-/vinyl-2.2.1.tgz#23cfb8bbab5ece3803aa2c0a1eb28af7cbba1974"
   dependencies:
     clone "^2.1.1"
     clone-buffer "^1.0.0"
