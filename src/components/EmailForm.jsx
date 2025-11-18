@@ -28,11 +28,11 @@ export const EmailForm = () => {
     // In production, submit via AJAX to Netlify
     const formData = {
       'form-name': 'contact',
-      fname: e.target.fname.value,
-      lname: e.target.lname.value,
-      emailAddress: e.target.emailAddress.value,
-      phone: e.target.phone.value || '(not provided)',
-      message: e.target.message.value || '(not provided)'
+      'First Name': e.target['First Name'].value,
+      'Last Name': e.target['Last Name'].value,
+      'Email Address': e.target['Email Address'].value,
+      'Phone': e.target.Phone.value || '(not provided)',
+      'Message': e.target.Message.value || '(not provided)'
     };
 
     try {
@@ -77,13 +77,13 @@ export const EmailForm = () => {
       
       <div className="space-y-3">
         <div className="mb-3">
-          <label htmlFor="fname" className="block mb-1.5 text-sm">
+          <label htmlFor="first-name" className="block mb-1.5 text-sm">
             <em className="relative -left-0.5 text-base text-red-600 not-italic inline-block mr-0.5" aria-label="required">*</em>First Name:
           </label>
           <input 
             type="text" 
-            id="fname"
-            name="fname" 
+            id="first-name"
+            name="First Name" 
             required 
             placeholder="Enter your first name"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
@@ -91,13 +91,13 @@ export const EmailForm = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="lname" className="block mb-1.5 text-sm">
+          <label htmlFor="last-name" className="block mb-1.5 text-sm">
             <em className="relative -left-0.5 text-base text-red-600 not-italic inline-block mr-0.5" aria-label="required">*</em>Last Name:
           </label>
           <input 
             type="text" 
-            id="lname"
-            name="lname" 
+            id="last-name"
+            name="Last Name" 
             required 
             placeholder="Enter your last name"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
@@ -105,13 +105,13 @@ export const EmailForm = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="emailAddress" className="block mb-1.5 text-sm">
+          <label htmlFor="email-address" className="block mb-1.5 text-sm">
             <em className="relative -left-0.5 text-base text-red-600 not-italic inline-block mr-0.5" aria-label="required">*</em>Email:
           </label>
           <input 
             type="email" 
-            id="emailAddress"
-            name="emailAddress" 
+            id="email-address"
+            name="Email Address" 
             required 
             placeholder="Enter your email address"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
@@ -125,7 +125,7 @@ export const EmailForm = () => {
           <input 
             type="tel" 
             id="phone"
-            name="phone" 
+            name="Phone" 
             placeholder="(555) 123-4567"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
           />
@@ -138,7 +138,7 @@ export const EmailForm = () => {
           </label>
           <textarea 
             id="message"
-            name="message" 
+            name="Message" 
             rows="5"
             placeholder="Please describe your inquiry..."
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300] resize-y" 
