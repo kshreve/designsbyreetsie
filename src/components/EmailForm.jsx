@@ -1,24 +1,64 @@
+import { useState } from 'react';
+
 export const EmailForm = () => {
-  const handleSubmit = (e) => {
-    // In local development, prevent form submission and show message
+  const [status, setStatus] = useState({ type: null, message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ type: null, message: '' });
+
+    // In local development, show mock success
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-      e.preventDefault();
-      const formData = {
-        firstName: e.target.fname.value,
-        lastName: e.target.lname.value,
-        email: e.target.emailAddress.value,
-        phone: e.target.phone.value || '(not provided)',
-        message: e.target.message.value || '(not provided)'
-      };
-      
-      alert('⚠️ Netlify forms only work in production.\n\nWhen deployed to Netlify, this form will work correctly.\n\nForm data (for testing):\n' + 
-        `- Name: ${formData.firstName} ${formData.lastName}\n` +
-        `- Email: ${formData.email}\n` +
-        `- Phone: ${formData.phone}\n` +
-        `- Message: ${formData.message}`);
-      return false;
+      setIsSubmitting(false);
+      setStatus({
+        type: 'success',
+        message: '⚠️ Netlify forms only work in production. This form will work correctly when deployed to Netlify.'
+      });
+      return;
     }
-    // In production, let Netlify handle it normally
+
+    // In production, submit via AJAX to Netlify
+    const formData = {
+      'form-name': 'contact',
+      fname: e.target.fname.value,
+      lname: e.target.lname.value,
+      emailAddress: e.target.emailAddress.value,
+      phone: e.target.phone.value || '(not provided)',
+      message: e.target.message.value || '(not provided)'
+    };
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(formData)
+      });
+
+      if (response.ok) {
+        setStatus({
+          type: 'success',
+          message: 'Thank you! Your form submission has been received. We\'ll get back to you soon.'
+        });
+        e.target.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: 'Sorry, there was an error submitting your form. Please try again or contact us directly.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -106,8 +146,24 @@ export const EmailForm = () => {
         </div>
 
         <div className="mb-3">
-          <button className="px-4 py-2 text-sm bg-[#993300] text-white rounded hover:bg-[#790000] transition-colors" type="submit">Submit!</button>
+          <button 
+            className="px-4 py-2 text-sm bg-[#993300] text-white rounded hover:bg-[#790000] transition-colors disabled:opacity-50 disabled:cursor-not-allowed" 
+            type="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Submitting...' : 'Submit!'}
+          </button>
         </div>
+
+        {status.message && (
+          <div className={`mb-3 p-3 rounded text-sm ${
+            status.type === 'success' 
+              ? 'bg-green-50 text-green-800 border border-green-200' 
+              : 'bg-red-50 text-red-800 border border-red-200'
+          }`}>
+            {status.message}
+          </div>
+        )}
       </div>
     </form>
   );

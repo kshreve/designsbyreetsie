@@ -36,6 +36,10 @@ export default defineConfig({
         {
           src: 'public/images/**/*',
           dest: 'images'
+        },
+        {
+          src: 'public/_redirects',
+          dest: '.'
         }
       ]
     })
