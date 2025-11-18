@@ -28,11 +28,11 @@ export const EmailForm = () => {
     // In production, submit via AJAX to Netlify
     const formData = {
       'form-name': 'contact',
-      'First Name': e.target['First Name'].value,
-      'Last Name': e.target['Last Name'].value,
-      'Email Address': e.target['Email Address'].value,
-      'Phone': e.target.Phone.value || '(not provided)',
-      'Message': e.target.Message.value || '(not provided)'
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
+      emailAddress: e.target.emailAddress.value,
+      phone: e.target.phone.value || '(not provided)',
+      message: e.target.message.value || '(not provided)'
     };
 
     try {
@@ -83,7 +83,7 @@ export const EmailForm = () => {
           <input 
             type="text" 
             id="first-name"
-            name="First Name" 
+            name="firstName" 
             required 
             placeholder="Enter your first name"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
@@ -97,7 +97,7 @@ export const EmailForm = () => {
           <input 
             type="text" 
             id="last-name"
-            name="Last Name" 
+            name="lastName" 
             required 
             placeholder="Enter your last name"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
@@ -111,7 +111,7 @@ export const EmailForm = () => {
           <input 
             type="email" 
             id="email-address"
-            name="Email Address" 
+            name="emailAddress" 
             required 
             placeholder="Enter your email address"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
@@ -125,7 +125,7 @@ export const EmailForm = () => {
           <input 
             type="tel" 
             id="phone"
-            name="Phone" 
+            name="phone" 
             placeholder="(555) 123-4567"
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300]" 
           />
@@ -138,7 +138,7 @@ export const EmailForm = () => {
           </label>
           <textarea 
             id="message"
-            name="Message" 
+            name="message" 
             rows="5"
             placeholder="Please describe your inquiry..."
             className="w-full px-2.5 py-1.5 text-sm border border-gray-300 rounded bg-white text-black focus:outline-none focus:ring-1 focus:ring-[#993300] focus:border-[#993300] resize-y" 
