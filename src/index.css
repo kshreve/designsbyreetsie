@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-header-bg: #790000;
+  --color-nav-bg: #E5CA9C;
+  --color-page-bg: #D7AD67;
+  --color-link: #F7941D;
+  --color-title: #993300;
+  --color-route-name: #B66263;
+  
+  --font-serif: Georgia, serif;
+  --font-script: 'Bad Script', cursive;
+  --font-sans: verdana, arial, sans-serif;
+  
+  --breakpoint-lg: 831px;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    background-color: var(--color-page-bg);
+    z-index: 0;
+  }
+  
+  body {
+    overflow-y: visible;
+    height: auto;
+  }
+  
+  a {
+    color: var(--color-link);
+  }
+  
+  p {
+    margin-bottom: 0.5em;
+  }
+  
+  input:disabled {
+    background-color: #DDDDDD;
+  }
+  
+  button:disabled {
+    background-color: #DDDDDD;
+  }
+}
+
+
