@@ -37,7 +37,7 @@ export const About = () => {
           <p className="mb-2">Reetsie is available to do almost any desired project on a commissioned basis.</p>
         </div>
         <div className="w-full md:w-[48%] box-border">
-          <img className="w-full box-border" src="img/ReetsieProfileonMisty.jpg" />
+          <img className="w-full box-border" src="/img/ReetsieProfileonMisty.jpg" />
           <p className="text-title font-sans text-xl mb-2">Contact Reetsie</p>
           <p className="mb-2">
             Reetsie welcomes all inquiries regarding her gourd artwork. Find out how you can purchase

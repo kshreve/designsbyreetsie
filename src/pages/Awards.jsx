@@ -30,7 +30,7 @@ export const Awards = () => {
       <div className="w-full md:w-[39.33%] box-border">
         <p className="text-title font-sans text-xl mb-2">Award Winning Artwork</p>
         <div className="text-center">
-          <img className="mx-auto block" src="../img/ReetsieWinningGourd.jpg" />
+          <img className="mx-auto block" src="/img/ReetsieWinningGourd.jpg" />
         </div>
         <p className="mb-2">
           Reetsie's gourd artwork has achieved many awards over the past few years, including

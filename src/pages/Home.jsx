@@ -28,7 +28,7 @@ export const Home = () => {
             Marguerite "Reetsie" Fuller is a self taught artist and professional equine trainer who
             has always been enthralled by the beauty she sees around her in nature.
           </p>
-          <img className="w-full md:w-[30.67%] box-border" src="img/ReetsieProfileHead.jpg" />
+          <img className="w-full md:w-[30.67%] box-border" src="/img/ReetsieProfileHead.jpg" />
         </div>
 
         <p className="mb-2">
